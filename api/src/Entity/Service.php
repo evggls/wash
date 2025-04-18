@@ -13,23 +13,34 @@ class Service
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $exit = null;
+    #[ORM\Column]
+    private ?string $title = null;
+    #[ORM\Column]
+    private ?int $price = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getExit(): ?string
+    public function getTitle(): ?string
     {
-        return $this->exit;
+        return $this->title;
     }
 
-    public function setExit(string $exit): static
+    public function setTitle(?string $title): void
     {
-        $this->exit = $exit;
-
-        return $this;
+        $this->title = $title;
     }
+
+    public function getPrice(): ?int
+    {
+        return $this->price;
+    }
+
+    public function setPrice(?int $price): void
+    {
+        $this->price = $price;
+    }
+
 }
