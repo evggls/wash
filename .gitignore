@@ -1,0 +1,4 @@
+backend/.docker/db/data/
+backend/.env
+backend/vendor/
+backend/var
